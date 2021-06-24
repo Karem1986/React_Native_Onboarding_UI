@@ -4,11 +4,6 @@ import Onboarding from 'react-native-onboarding-swiper';
 
 export default function OnboardingScreen({navigation}) {
   return (
-    // <View style={styles.container}>
-    //   <Text>Onboarding Screen</Text>
-    //   <Button title="Click here" onPress={() => navigation.navigate('Login')} />
-    // </View>
-
     <Onboarding
       pages={[
         {
