@@ -1,61 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import OnboardingScreen from './src/screens/OnboardingScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
-import React from 'react';
+import {StyleSheet} from 'react-native';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+const AppStack = createStackNavigator();
 
 function App() {
   return (
-    <SafeAreaView>
-      {/* <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} /> */}
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Section title="Learn More">
-          Read the docs to discover what to do next:
-        </Section>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AppStack.Navigator>
+        <AppStack.Screen name="Onboarding" component={OnboardingScreen} />
+        <AppStack.Screen name="Login" component={LoginScreen} />
+      </AppStack.Navigator>
+    </NavigationContainer>
   );
 }
 
