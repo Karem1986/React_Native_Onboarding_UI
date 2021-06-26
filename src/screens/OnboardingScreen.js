@@ -12,13 +12,25 @@ export default function OnboardingScreen({navigation}) {
             image: (
               <Image source={require('../assets/peopleIllustration1.png')} />
             ),
-            title: 'Onboarding 1: Welcome to ActiviFun',
+            title: 'Welcome to ActiviFun',
             subtitle: 'Done with React Native Onboarding swipper for you',
           },
           {
-            backgroundColor: '#a6a4d0',
+            backgroundColor: '#66DE93',
             image: <Image source={require('../assets/people2.png')} />,
-            title: 'Onboarding 2: Choose from activities or create your own',
+            title: 'A new way to meet people',
+            subtitle: 'Thanks to Freepik for the grafics',
+          },
+          {
+            backgroundColor: '#66DE93',
+            image: <Image source={require('../assets/people2.png')} />,
+            title: 'Create your own activites or...',
+            subtitle: 'Thanks to Freepik for the grafics',
+          },
+          {
+            backgroundColor: '#66DE93',
+            image: <Image source={require('../assets/people2.png')} />,
+            title: 'Search from the list and join',
             subtitle: 'Thanks to Freepik for the grafics',
           },
         ]}
