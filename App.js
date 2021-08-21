@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import OnboardingScreen from './src/screens/OnboardingScreen';
@@ -10,32 +10,6 @@ import {StyleSheet} from 'react-native';
 const AppStack = createStackNavigator();
 
 function App() {
-  // const [isFirstTime, setIsFirstTime] = useState(true);
-
-  // useEffect(() => {
-  //   AsyncStorage.getItem('isFirstTime').then(value => {
-  //     if (value === true) {
-  //       AsyncStorage.setItem('isFirstTime', 'true');
-  //       setIsFirstTime(true);
-  //     } else {
-  //       setIsFirstTime(false);
-  //     }
-  //   });
-  // }, []);
-
-  // if (!isFirstTime) {
-  //   return <LoginScreen />;
-  // } else if (isFirstTime) {
-  //   return (
-  //     <NavigationContainer>
-  //       <AppStack.Navigator>
-  //         <AppStack.Screen name="Onboarding" component={OnboardingScreen} />
-  //         <AppStack.Screen name="Login" component={LoginScreen} />
-  //       </AppStack.Navigator>
-  //     </NavigationContainer>
-  //   );
-  // }
-
   return (
     <NavigationContainer>
       <AppStack.Navigator>
