@@ -21,7 +21,7 @@ export default function OnboardingScreen({navigation}) {
               <Image source={require('../assets/peopleIllustration1.png')} />
             ),
             title: 'Welcome to ActiviFun',
-            subtitle: 'Done with React Native Onboarding swipper for you',
+            subtitle: 'Done with React Native Onboarding swipper library',
           },
           {
             backgroundColor: '#66DE93',
